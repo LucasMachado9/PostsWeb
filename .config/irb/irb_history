@@ -1,0 +1,21 @@
+require 'securerandom'\
+SecureRandom.hex(32)
+require 'securerandom'\
+SecureRandom.hex(16)
+require 'securerandom'\
+SecureRandom.hex(16).size
+puts SecureRandom.hex(16)
+quit
+require 'securerandom'\
+puts SecureRandom.hex(16)
+require 'securerandom'\
+puts SecureRandom.hex(16)
+require 'secretrandom'
+require 'randomsecret'
+require 'secretrandom'
+require 'securerandom'
+SecureRandom.hex(16)
+puts SecureRandom.hex(16)
+Post.new(title: "Meu primeiro post", content:"Ronaldo").save 
+Post.new(title: "Meu segundo post", content:"Neymar").save 
+Post.new(title: "Meu terceiro post", content:"Messi").save 

@@ -1,0 +1,7 @@
+ <%= simple_form_for @comment do |f| %>
+    
+    <%= f.input :post_id, as: :hidden %>
+    <%= f.input :content, as: :text, label: false, placeholder: "Digite seu comentário" %>
+    <%= f.button :submit%>
+    
+<% end %>

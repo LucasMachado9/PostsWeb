@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 ">
+      
+      
+      <div class="card">
+        <div class="card-body"> 
+          <h5 class="card-title"><%= @post.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= @post.user.email %></h6>
+          
+            <span class="badge bg-primary-secondary"><%= @tags %> </span>
+            
+          <p class="card-text"> <%= @post.content %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+
+       
+    
+<div class="container">
+  <div class="col-12">
+
+        <h4>Comentários</h4>
+
+      <% @post.comments.each do |comment|%>
+        <% next if comment.persisted? %>
+      <div class="card">
+        <div>
+          <p><%= link_to comment.content, comment %></p>
+          
+        <%= link_to "apagar", comment, data:{method: :delete, confirm: "Você tem certeza?"}%>
+        </div>
+      
+        </div>
+</div>
+          <br>
+        
+        <% end %>
+          
+      
+          
+      
+    
+  
+  <%= simple_form_for @comment do |f| %>
+    
+    <%= f.input :post_id, as: :hidden %>
+    <%= f.input :content, as: :text, label: false, placeholder: "Digite seu comentário" %>
+    <%= f.button :submit%>
+    
+        <% end %>
+
+    </div> 
+          
+   
+
+

@@ -1,0 +1,8 @@
+ <div class="card">
+        <div>
+          <p><%=  @comment.content %></p>
+        <%= link_to "apagar", @comment, data:{method: :delete, confirm: "Você tem certeza?"}%>
+
+          
+        </div>
+</div>
